@@ -126,6 +126,10 @@ export class HousingService {
   }
 
   submitApplication(firstName: string, lastName: string, email: string) {
+    if (!firstName && !lastName && !email) {
+      alert("Application form is empty!");
+      return;
+    }
     alert(`Homes application received! \nFirstname: ${firstName} \nLastname: ${lastName} \nE-Mail: ${email}`);
   }
 }
